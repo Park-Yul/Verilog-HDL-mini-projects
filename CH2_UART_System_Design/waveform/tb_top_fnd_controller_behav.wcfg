@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_fnd_controller_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_top_fnd_controller" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="167470005000fs"></ZoomStartTime>
+      <ZoomEndTime time="175600005001fs"></ZoomEndTime>
+      <Cursor1Time time="175500005000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="187"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wave_markers>
+      <marker time="175500005000" label="" />
+      <marker time="167500005000" label="" />
+   </wave_markers>
+   <wvobject type="divider" fp_name="divider25">
+      <obj_property name="label">DUT input</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/i_hour_sel" type="logic">
+      <obj_property name="ElementShortName">i_hour_sel</obj_property>
+      <obj_property name="ObjectShortName">i_hour_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/i_min_sel" type="logic">
+      <obj_property name="ElementShortName">i_min_sel</obj_property>
+      <obj_property name="ObjectShortName">i_min_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/i_sec_sel" type="logic">
+      <obj_property name="ElementShortName">i_sec_sel</obj_property>
+      <obj_property name="ObjectShortName">i_sec_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/display_mode" type="array">
+      <obj_property name="ElementShortName">display_mode[2:0]</obj_property>
+      <obj_property name="ObjectShortName">display_mode[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/msec" type="array">
+      <obj_property name="ElementShortName">msec[7:0]</obj_property>
+      <obj_property name="ObjectShortName">msec[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/sec" type="array">
+      <obj_property name="ElementShortName">sec[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sec[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/min" type="array">
+      <obj_property name="ElementShortName">min[7:0]</obj_property>
+      <obj_property name="ObjectShortName">min[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/hour" type="array">
+      <obj_property name="ElementShortName">hour[7:0]</obj_property>
+      <obj_property name="ObjectShortName">hour[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider28">
+      <obj_property name="label">Inner Signal</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/DUT/U_BCD/bcd_in" type="array">
+      <obj_property name="ElementShortName">bcd_in[3:0]</obj_property>
+      <obj_property name="ObjectShortName">bcd_in[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/DUT/w_dot_onoff" type="logic">
+      <obj_property name="ElementShortName">w_dot_onoff</obj_property>
+      <obj_property name="ObjectShortName">w_dot_onoff</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider25">
+      <obj_property name="label">DUT output</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/fnd_com" type="array">
+      <obj_property name="ElementShortName">fnd_com[3:0]</obj_property>
+      <obj_property name="ObjectShortName">fnd_com[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top_fnd_controller/fnd_data" type="array">
+      <obj_property name="ElementShortName">fnd_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fnd_data[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>
