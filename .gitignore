@@ -1,0 +1,16 @@
+# Vivado log, temp file
+*.jou
+*.log
+*.str
+*.Xil/
+
+# Vivado sim file
+*.sim/
+
+# vivado XDC file
+*.xdc
+
+#etc
+*.srcs/
+vitis_workspace/
+vitis_workspace_2/
