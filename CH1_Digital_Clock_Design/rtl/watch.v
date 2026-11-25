@@ -107,11 +107,11 @@ module watch_datapath #(
 ) (
     input                      clk,
     input                      reset,
-    input                      i_hour_sel,
-    input                      i_min_sel,
-    input                      i_sec_sel,
-    input                      i_btn_U,
-    input                      i_btn_D,
+    input			i_hour_sel,
+input			i_min_sel,
+input			i_sec_sel,
+    input                      i_up_count,
+    input                      i_down_count,
     output [   MSEC_WIDTH-1:0] msec,
     output [ SEC_WIDTH -1 : 0] sec,
     output [  MIN_WIDTH-1 : 0] min,
@@ -120,13 +120,17 @@ module watch_datapath #(
     // wire
     wire w_tick_100hz;
     wire w_tick_msec, w_tick_sec, w_tick_min;
-    wire w_hour_count_up, w_hour_count_down;
-    wire w_min_count_up, w_min_count_down;
-    wire w_sec_count_up, w_sec_count_down;
+wire up_count_hour, up_count_min, up_count_sec;
+wire down_count_hour, down_count_min, down_count_sec;
 
-    // assignment
-    assign {w_hour_count_up,w_min_count_up,w_sec_count_up} = {i_hour_sel, i_min_sel, i_sec_sel} & {3{i_btn_U}};
-    assign {w_hour_count_down,w_min_count_down,w_sec_count_down} = {i_hour_sel, i_min_sel, i_sec_sel} & {3{i_btn_D}};
+	// assignment
+	assign up_count_hour = i_up_count & i_hour_sel;
+assign up_count_min = i_up_count & i_min_sel;
+assign up_count_sec = i_up_count & i_sec_sel;
+
+	assign down_count_hour = i_down_count & i_hour_sel;
+assign down_count_min = i_down_count & i_min_sel;
+assign down_count_sec = i_down_count & i_sec_sel;
 
     // tick_gen instantiation
     tick_gen_100hz U_TICK_GEN_100HZ (
@@ -159,8 +163,8 @@ module watch_datapath #(
         .clk(clk),
         .reset(reset),
         .i_tick(w_tick_msec),
-        .i_count_up(w_sec_count_up),
-        .i_count_down(w_sec_count_down),
+        .i_count_up(up_count_sec),
+        .i_count_down(down_count_sec),
         .time_count(sec),
         .o_tick(w_tick_sec)
     );
@@ -174,8 +178,8 @@ module watch_datapath #(
         .clk(clk),
         .reset(reset),
         .i_tick(w_tick_sec),
-        .i_count_up(w_min_count_up),
-        .i_count_down(w_min_count_down),
+        .i_count_up(up_count_min),
+        .i_count_down(down_count_min),
         .time_count(min),
         .o_tick(w_tick_min)
     );
@@ -189,8 +193,8 @@ module watch_datapath #(
         .clk(clk),
         .reset(reset),
         .i_tick(w_tick_min),
-        .i_count_up(w_hour_count_up),
-        .i_count_down(w_hour_count_down),
+        .i_count_up(up_count_hour),
+        .i_count_down(down_count_hour),
         .time_count(hour),
         .o_tick()
     );
